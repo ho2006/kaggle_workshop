@@ -1,0 +1,17 @@
+{
+  "experiment_id": "E005_xgb_raw_v1_seed42",
+  "model": "xgboost",
+  "feature_version": "raw_v1",
+  "oof_auc": 0.9645008151840893,
+  "seed": 42,
+  "fold_version": "folds_seed42",
+  "created_at": "2026-08-02T12:31:02+00:00",
+  "prediction_summary": {
+    "min": 3.90386805520393e-05,
+    "max": 1.0,
+    "mean": 0.7096462902823786,
+    "rows": 296302
+  },
+  "source_prediction": "C:\\kaggle\\artifacts\\predictions\\E005_xgb_raw_v1_seed42_test.csv",
+  "submission_file": "C:\\kaggle\\submissions\\submission_E005_xgb_raw_v1_seed42.csv"
+}
