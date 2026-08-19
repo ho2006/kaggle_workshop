@@ -1,0 +1,14 @@
+extends: configs/baseline.yaml
+model:
+  name: catboost
+  params:
+    loss_function: Logloss
+    eval_metric: AUC
+    # Stage 1 CPU cap: the original 5,000-round first fold exceeded 18 minutes.
+    iterations: 1500
+    learning_rate: 0.03
+    depth: 8
+    l2_leaf_reg: 5.0
+    random_seed: 42
+    verbose: 200
+    allow_writing_files: false

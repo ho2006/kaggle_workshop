@@ -1,0 +1,28 @@
+project:
+  name: kaggle-playground-s6e8
+  competition: playground-series-s6e8
+  seed: 42
+
+data:
+  train_path: data/raw/train.csv
+  test_path: data/raw/test.csv
+  sample_submission_path: data/raw/sample_submission.csv
+  target_column: addicted_label
+  id_column: id
+  low_cardinality_numeric_threshold: 20
+
+validation:
+  strategy: stratified_kfold
+  n_splits: 5
+  shuffle: true
+  random_state: 42
+  fold_file: artifacts/folds/folds_seed42.csv
+
+training:
+  early_stopping_rounds: 200
+  num_threads: -1
+  train_full_model: true
+
+output:
+  artifact_dir: artifacts
+  submission_dir: submissions

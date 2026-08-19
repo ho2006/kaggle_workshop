@@ -1,0 +1,19 @@
+extends: configs/baseline.yaml
+model:
+  name: lightgbm
+  params:
+    objective: binary
+    metric: auc
+    learning_rate: 0.03
+    n_estimators: 5000
+    num_leaves: 63
+    max_depth: -1
+    min_child_samples: 100
+    subsample: 0.9
+    colsample_bytree: 0.9
+    reg_alpha: 0.0
+    reg_lambda: 1.0
+    random_state: 42
+    n_jobs: -1
+    verbosity: -1
+
